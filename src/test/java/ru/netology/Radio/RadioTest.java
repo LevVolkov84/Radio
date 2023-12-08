@@ -18,6 +18,18 @@ public class RadioTest {
 
 
     @Test
+    public void currentRadioMax() {
+        Radio rad = new Radio();
+        rad.setCurrentRadio(10);
+
+        int expected = 0;
+        int actual = rad.getCurrentRadio();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+    @Test
     public void testNextRadio() {
         Radio rad = new Radio();
         rad.setCurrentRadio(4);
@@ -107,6 +119,18 @@ public class RadioTest {
         rad.setCurrentVolume(50);
 
         int expected = 50;
+        int actual = rad.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void currentVolumeMax() {
+        Radio rad = new Radio();
+        rad.setCurrentVolume(200);
+
+        int expected = 0;
         int actual = rad.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
